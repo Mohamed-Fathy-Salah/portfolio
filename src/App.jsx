@@ -6,6 +6,8 @@ import Experience from './pages/Experience'
 import Skills from './pages/Skills'
 import Projects from './pages/Projects'
 import Education from './pages/Education'
+import Blogs from './pages/Blogs'
+import BlogPost from './pages/BlogPost'
 import Contact from './pages/Contact'
 import StarField from './components/StarField'
 import './styles/App.css'
@@ -24,6 +26,8 @@ function App() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/education" element={<Education />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

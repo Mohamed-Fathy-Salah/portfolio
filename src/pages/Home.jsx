@@ -55,6 +55,12 @@ function Home() {
           <p>View my creative works</p>
         </Link>
         
+        <Link to="/blogs" className="quick-link-card cosmic-card">
+          <div className="icon">📝</div>
+          <h3>Blog</h3>
+          <p>Read technical deep dives</p>
+        </Link>
+        
         <Link to="/contact" className="quick-link-card cosmic-card">
           <div className="icon">📬</div>
           <h3>Contact</h3>
