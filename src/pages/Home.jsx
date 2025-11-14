@@ -12,11 +12,11 @@ function Home() {
           </div>
           
           <h1 className="hero-title">
-            Welcome to My <span className="gradient-text">Cosmic</span> Portfolio
+            Hi, I'm <span className="gradient-text">Mohamed Fathy</span>
           </h1>
           
           <p className="hero-subtitle">
-            Exploring the universe of technology, one project at a time
+            Backend Engineer | Problem solver | Minimalist | Linux enthusiastic
           </p>
           
           <div className="hero-buttons">

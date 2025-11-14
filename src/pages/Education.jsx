@@ -3,53 +3,82 @@ import './Education.css'
 function Education() {
   const education = [
     {
-      degree: "Master of Science in Computer Science",
-      institution: "Tech University",
-      period: "2016 - 2018",
-      description: "Specialized in Software Engineering and Artificial Intelligence",
+      degree: "Bachelor of Science in Computer Engineering",
+      institution: "Benha University - Shoubra Faculty of Engineering",
+      period: "Sep 2017 - Jun 2022",
+      description: "Graduated with distinction, focusing on software engineering, algorithms, and system design.",
       achievements: [
-        "GPA: 3.8/4.0",
-        "Research in Machine Learning and Neural Networks",
-        "Published paper on distributed systems"
-      ]
-    },
-    {
-      degree: "Bachelor of Science in Software Engineering",
-      institution: "Engineering College",
-      period: "2012 - 2016",
-      description: "Foundation in software development and computer systems",
-      achievements: [
-        "GPA: 3.7/4.0",
-        "Dean's List all semesters",
-        "Led university programming club"
+        "GPA: 4.0 / 91% (Excellent with Honors)",
+        "Ranked 1st in Bachelor's Class (2022)",
+        "Teaching Assistant in Computer Engineering (Oct 2022 - Jan 2023)",
+        "Active member of programming competitions and clubs"
       ]
     }
   ]
 
   const certifications = [
     {
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
+      name: ".NET 8 Microservices Course",
+      issuer: "Professional Development",
+      year: "2024",
+      icon: "⚙️"
+    },
+    {
+      name: "Network Engineering: Low Latency Design",
+      issuer: "Professional Development",
+      year: "2024",
+      icon: "🌐"
+    },
+    {
+      name: "Node.js + React Microservices",
+      issuer: "E-Commerce Architecture",
+      year: "2023",
+      icon: "📦"
+    },
+    {
+      name: "Database Systems (CMU)",
+      issuer: "Carnegie Mellon University",
+      year: "2023",
+      icon: "💾"
+    },
+    {
+      name: "Performance Engineering (MIT)",
+      issuer: "Massachusetts Institute of Technology",
+      year: "2023",
+      icon: "⚡"
+    },
+    {
+      name: "EF SET C2 English Certificate",
+      issuer: "EF Standard English Test",
       year: "2022",
-      icon: "☁️"
+      icon: "🌍"
+    }
+  ]
+
+  const awards = [
+    {
+      name: "Ranked 1st in Bachelor's Class",
+      issuer: "Benha University",
+      year: "2022",
+      icon: "🏆"
     },
     {
-      name: "Professional Scrum Master",
-      issuer: "Scrum.org",
+      name: "ECPC Qualification - 21st Place",
+      issuer: "Egyptian Collegiate Programming Contest",
+      year: "2022",
+      icon: "💻"
+    },
+    {
+      name: "ACPC Qualification - 30th Place",
+      issuer: "Arab Collegiate Programming Contest",
+      year: "2022",
+      icon: "🎯"
+    },
+    {
+      name: "ECPC Qualification - 118th Place",
+      issuer: "Egyptian Collegiate Programming Contest",
       year: "2021",
-      icon: "📋"
-    },
-    {
-      name: "MongoDB Certified Developer",
-      issuer: "MongoDB University",
-      year: "2021",
-      icon: "🍃"
-    },
-    {
-      name: "React Advanced Patterns",
-      issuer: "Frontend Masters",
-      year: "2020",
-      icon: "⚛️"
+      icon: "📊"
     }
   ]
 
@@ -85,7 +114,7 @@ function Education() {
         </section>
         
         <section className="certifications-section">
-          <h2 className="section-heading">Professional Certifications</h2>
+          <h2 className="section-heading">Professional Certifications & Courses</h2>
           <div className="certifications-grid">
             {certifications.map((cert, index) => (
               <div key={index} className="cert-card cosmic-card">
@@ -93,6 +122,20 @@ function Education() {
                 <h3>{cert.name}</h3>
                 <p className="cert-issuer">{cert.issuer}</p>
                 <span className="cert-year">{cert.year}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+        
+        <section className="certifications-section">
+          <h2 className="section-heading">Awards & Achievements</h2>
+          <div className="certifications-grid">
+            {awards.map((award, index) => (
+              <div key={index} className="cert-card cosmic-card">
+                <div className="cert-icon">{award.icon}</div>
+                <h3>{award.name}</h3>
+                <p className="cert-issuer">{award.issuer}</p>
+                <span className="cert-year">{award.year}</span>
               </div>
             ))}
           </div>

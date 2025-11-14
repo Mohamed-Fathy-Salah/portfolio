@@ -3,47 +3,69 @@ import './Skills.css'
 function Skills() {
   const skillCategories = [
     {
-      category: "Frontend Development",
-      icon: "🎨",
-      skills: [
-        { name: "React", level: 95 },
-        { name: "JavaScript/TypeScript", level: 90 },
-        { name: "HTML/CSS", level: 95 },
-        { name: "Vue.js", level: 85 },
-        { name: "Tailwind CSS", level: 90 }
-      ]
-    },
-    {
       category: "Backend Development",
       icon: "⚙️",
       skills: [
-        { name: "Node.js", level: 90 },
-        { name: "Python", level: 85 },
-        { name: "Express.js", level: 88 },
-        { name: "RESTful APIs", level: 92 },
-        { name: "GraphQL", level: 80 }
+        { name: "C# / .NET", level: 95 },
+        { name: "ASP.NET Core", level: 95 },
+        { name: "Entity Framework Core", level: 90 },
+        { name: "Microservices", level: 90 },
+        { name: "RESTful APIs", level: 95 }
       ]
     },
     {
-      category: "Database & Cloud",
-      icon: "☁️",
+      category: "Databases & Caching",
+      icon: "💾",
       skills: [
+        { name: "SQL Server", level: 92 },
+        { name: "PostgreSQL", level: 88 },
         { name: "MongoDB", level: 85 },
-        { name: "PostgreSQL", level: 82 },
-        { name: "AWS", level: 78 },
-        { name: "Docker", level: 85 },
-        { name: "Redis", level: 75 }
+        { name: "Redis", level: 88 },
+        { name: "Database Optimization", level: 90 }
       ]
     },
     {
-      category: "Tools & Others",
+      category: "Message Brokers & Architecture",
+      icon: "🔄",
+      skills: [
+        { name: "RabbitMQ", level: 90 },
+        { name: "MassTransit", level: 88 },
+        { name: "Event-Driven Architecture", level: 90 },
+        { name: "Clean Architecture", level: 92 },
+        { name: "SOLID Principles", level: 95 }
+      ]
+    },
+    {
+      category: "DevOps & Tools",
       icon: "🛠️",
       skills: [
-        { name: "Git", level: 92 },
-        { name: "CI/CD", level: 85 },
-        { name: "Agile/Scrum", level: 88 },
-        { name: "Testing (Jest, Cypress)", level: 85 },
-        { name: "Linux", level: 80 }
+        { name: "Docker", level: 88 },
+        { name: "Kubernetes", level: 82 },
+        { name: "Git & GitHub", level: 92 },
+        { name: "CI/CD (GitHub Actions)", level: 85 },
+        { name: "Linux & Bash", level: 85 }
+      ]
+    },
+    {
+      category: "Additional Technologies",
+      icon: "💻",
+      skills: [
+        { name: "Python", level: 80 },
+        { name: "TypeScript / JavaScript", level: 85 },
+        { name: "React", level: 82 },
+        { name: "GraphQL & gRPC", level: 80 },
+        { name: "WebSockets & SignalR", level: 85 }
+      ]
+    },
+    {
+      category: "Soft Skills & Security",
+      icon: "🎯",
+      skills: [
+        { name: "Problem Solving", level: 95 },
+        { name: "Code Review & Mentoring", level: 90 },
+        { name: "OWASP Security Practices", level: 88 },
+        { name: "Team Collaboration", level: 92 },
+        { name: "Communication", level: 90 }
       ]
     }
   ]

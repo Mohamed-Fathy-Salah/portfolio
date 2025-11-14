@@ -8,18 +8,24 @@ function About() {
         
         <div className="about-content">
           <div className="about-intro cosmic-card">
-            <h2>Professional Summary</h2>
+            <h2>Backend Engineer & Microservices Expert</h2>
             <p>
-              Welcome to my cosmic corner of the web! I'm a passionate developer 
-              exploring the vast universe of technology. With a strong foundation 
-              in software development and a keen interest in innovative solutions, 
-              I bring creativity and technical expertise to every project.
+              Passionate Backend Engineer with expertise in building high-performance, 
+              scalable microservices architectures. Currently at EFG Holding – AFKAR Technology, 
+              where I maintain and enhance 17 microservices with a strong focus on performance, 
+              scalability, security, and consistency.
             </p>
             <p>
-              My journey in technology has been driven by curiosity and a desire 
-              to create meaningful digital experiences. From crafting elegant code 
-              to solving complex problems, I thrive on challenges that push the 
-              boundaries of what's possible.
+              My journey in software engineering has been marked by significant achievements 
+              in optimization and system design. I've reduced payment service execution times 
+              dramatically, improved rule engine performance by 350%, and cut database loads by 70%. 
+              I believe in writing clean, maintainable code that follows SOLID principles and 
+              industry best practices.
+            </p>
+            <p>
+              With a Bachelor's degree in Computer Engineering (GPA: 4.0 / 91%) and ranked 1st 
+              in my class, I combine strong theoretical foundations with practical expertise in 
+              .NET, SQL Server, MongoDB, Redis, RabbitMQ, and microservices architecture.
             </p>
           </div>
           
@@ -27,24 +33,27 @@ function About() {
             <div className="detail-card cosmic-card">
               <h3>🎯 Mission</h3>
               <p>
-                To leverage cutting-edge technologies and innovative thinking to 
-                build solutions that make a difference in people's lives.
+                To build robust, high-performance backend systems that solve real-world 
+                problems at scale, while mentoring teams and promoting best practices 
+                in software architecture and security.
               </p>
             </div>
             
             <div className="detail-card cosmic-card">
-              <h3>💡 Vision</h3>
+              <h3>💡 Expertise</h3>
               <p>
-                Constantly evolving and learning, staying at the forefront of 
-                technology while maintaining a human-centered approach to development.
+                Microservices architecture, performance optimization, distributed systems, 
+                clean architecture, and event-driven design. Proficient in .NET ecosystem, 
+                SQL/NoSQL databases, and DevOps practices.
               </p>
             </div>
             
             <div className="detail-card cosmic-card">
-              <h3>⚡ Values</h3>
+              <h3>⚡ Impact</h3>
               <p>
-                Innovation, continuous learning, collaboration, and creating 
-                impactful solutions with clean, maintainable code.
+                Reduced API response times by 40%, database load by 70%, and rule engine 
+                execution from 70 seconds to 2 seconds. Led code reviews and mentored 
+                junior developers on architecture best practices.
               </p>
             </div>
           </div>

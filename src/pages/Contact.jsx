@@ -11,43 +11,43 @@ function Contact() {
             <div className="info-card cosmic-card">
               <div className="info-icon">📧</div>
               <h3>Email</h3>
-              <p>your.email@example.com</p>
+              <p>mohamedfathy29908@gmail.com</p>
             </div>
             
             <div className="info-card cosmic-card">
               <div className="info-icon">📱</div>
               <h3>Phone</h3>
-              <p>+1 (555) 123-4567</p>
+              <p>+20 114 319 1824</p>
             </div>
             
             <div className="info-card cosmic-card">
               <div className="info-icon">📍</div>
               <h3>Location</h3>
-              <p>San Francisco, CA</p>
+              <p>Cairo, Egypt</p>
             </div>
           </div>
           
           <div className="social-links">
             <h2>Connect With Me</h2>
             <div className="social-grid">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-card cosmic-card">
+              <a href="https://github.com/mofasa" target="_blank" rel="noopener noreferrer" className="social-card cosmic-card">
                 <div className="social-icon">💻</div>
                 <span>GitHub</span>
               </a>
               
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-card cosmic-card">
+              <a href="https://linkedin.com/in/mohamed-fathy-b30047202" target="_blank" rel="noopener noreferrer" className="social-card cosmic-card">
                 <div className="social-icon">💼</div>
                 <span>LinkedIn</span>
               </a>
               
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-card cosmic-card">
-                <div className="social-icon">🐦</div>
-                <span>Twitter</span>
+              <a href="https://leetcode.com/mofasa" target="_blank" rel="noopener noreferrer" className="social-card cosmic-card">
+                <div className="social-icon">🎯</div>
+                <span>LeetCode</span>
               </a>
               
-              <a href="https://medium.com" target="_blank" rel="noopener noreferrer" className="social-card cosmic-card">
-                <div className="social-icon">📝</div>
-                <span>Medium</span>
+              <a href="mailto:mohamedfathy29908@gmail.com" className="social-card cosmic-card">
+                <div className="social-icon">📧</div>
+                <span>Email</span>
               </a>
             </div>
           </div>

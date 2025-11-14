@@ -3,36 +3,41 @@ import './Experience.css'
 function Experience() {
   const experiences = [
     {
-      title: "Senior Software Developer",
-      company: "Tech Innovations Inc.",
-      period: "2021 - Present",
-      description: "Leading development of cutting-edge web applications using modern technologies. Architecting scalable solutions and mentoring junior developers.",
+      title: "Backend Engineer",
+      company: "EFG Holding – AFKAR Technology",
+      period: "Apr 2024 - Present",
+      description: "Maintaining and enhancing 17 microservices with a strong focus on performance, scalability, security, and consistency. Tech Stack: .NET, SQL Server, MongoDB, Redis, RabbitMQ, Python, Microservices, Clean and Layered Architecture.",
       achievements: [
-        "Developed microservices architecture serving 1M+ users",
-        "Reduced application load time by 60%",
-        "Led team of 5 developers in agile environment"
+        "Optimized payment service execution time by resolving race conditions and parallelizing client payments",
+        "Improved Rule Engine performance by 350% through precompilation and lazy evaluation",
+        "Reduced 95th percentile execution time from 70 seconds to 2 seconds by rewriting service architecture",
+        "Implemented Saga Pattern for consistent distributed transaction management",
+        "Cut database load by 70% and reduced API response time by 40% through query optimization and Redis caching",
+        "Automated migration of 100,000+ unstructured records from Excel/Word to structured relational data",
+        "Led code reviews and mentored junior developers on architecture and OWASP security practices"
       ]
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Solutions Co.",
-      period: "2019 - 2021",
-      description: "Built responsive web applications and RESTful APIs. Collaborated with cross-functional teams to deliver high-quality products.",
+      title: "Backend Engineer",
+      company: "Self Employed (Freelance)",
+      period: "Jun 2022 - Present",
+      description: "Developed freelance projects focusing on scalable backend solutions. Tech Stack: .NET, PostgreSQL, React, TypeScript.",
       achievements: [
-        "Implemented CI/CD pipelines improving deployment efficiency",
-        "Created reusable component library used across projects",
-        "Optimized database queries reducing server costs by 30%"
+        "Built multi-tenant real estate management platform (Maskan) supporting 5,000+ monthly visitors",
+        "Implemented role-based access control, CDN integration, and OWASP security best practices",
+        "Developed JavaScript automation scripts to streamline tasks during military service",
+        "Created real-time notification systems for property matching"
       ]
     },
     {
-      title: "Junior Developer",
-      company: "StartUp Ventures",
-      period: "2018 - 2019",
-      description: "Contributed to various projects, learning best practices and modern development workflows.",
+      title: "Teaching Assistant",
+      company: "Shoubra Faculty of Engineering",
+      period: "Oct 2022 - Jan 2023",
+      description: "Teaching Assistant in Computer Engineering, Department of Electrical Engineering.",
       achievements: [
-        "Developed features for mobile-responsive web applications",
-        "Participated in code reviews and testing processes",
-        "Learned and applied TDD and BDD methodologies"
+        "Assisted in teaching computer engineering fundamentals",
+        "Mentored students in programming and system design concepts",
+        "Contributed to curriculum development and student assessments"
       ]
     }
   ]

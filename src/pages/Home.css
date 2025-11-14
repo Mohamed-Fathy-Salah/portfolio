@@ -19,8 +19,8 @@
 
 .profile-image-container {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 280px;
+  height: 280px;
   margin: 0 auto 2rem;
 }
 
@@ -182,8 +182,8 @@
   }
   
   .profile-image-container {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
   }
   
   .orbit {

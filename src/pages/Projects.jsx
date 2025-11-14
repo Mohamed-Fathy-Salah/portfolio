@@ -3,69 +3,81 @@ import './Projects.css'
 function Projects() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with real-time inventory management, payment integration, and admin dashboard.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
-      image: "🛒",
+      title: "Maskan - Real Estate Platform",
+      description: "Multi-tenant real estate management web application for brokers, featuring role-based access control, browser caching strategies, CDN integration, and OWASP security compliance. Supports 5,000+ unique visitors per month with real-time notifications.",
+      technologies: [".NET", "C#", "PostgreSQL", "ReactJS", "Tailwind", "AWS EC2", "CI/CD"],
+      image: "🏢",
       highlights: [
-        "Built scalable microservices architecture",
-        "Integrated Stripe payment gateway",
-        "Implemented real-time notifications"
+        "Multi-tenant architecture with role-based access control",
+        "Real-time property matching notifications",
+        "CDN integration and browser caching strategies",
+        "OWASP security best practices implementation",
+        "Supports 5,000+ monthly unique visitors"
       ]
     },
     {
-      title: "AI-Powered Analytics Dashboard",
-      description: "Interactive analytics platform using machine learning for predictive insights and data visualization.",
-      technologies: ["React", "Python", "TensorFlow", "D3.js", "PostgreSQL"],
-      image: "📊",
+      title: "Circle - Expense Management",
+      description: "Cross-platform expense management application for personal and group use, featuring an optimized algorithm for minimal settlement plans with interactive reports and visual charts for financial insights.",
+      technologies: ["TypeScript", "ReactJS", "Expo", "React Native"],
+      image: "💰",
       highlights: [
-        "ML models for trend prediction",
-        "Real-time data visualization",
-        "Custom chart components"
+        "Optimized settlement algorithm for group expenses",
+        "Cross-platform (iOS & Android) support",
+        "Interactive financial reports and charts",
+        "Personal and group expense tracking",
+        "Real-time expense synchronization"
       ]
     },
     {
-      title: "Social Media Application",
-      description: "Feature-rich social platform with real-time messaging, media sharing, and recommendation engine.",
-      technologies: ["React", "GraphQL", "Node.js", "Redis", "Socket.io"],
-      image: "💬",
+      title: "E-Commerce VTON Platform",
+      description: "Event-driven microservice platform for virtual garment shopping, integrating machine learning for virtual try-on capabilities and 3D modeling for realistic garment visualization.",
+      technologies: ["TypeScript", "Express", "Python", "FastAPI", "ML", "MongoDB", "Next.js", "NATS", "Kubernetes"],
+      image: "👔",
       highlights: [
-        "Real-time chat with WebSockets",
-        "Content recommendation algorithm",
-        "Scalable architecture for 100k+ users"
+        "Event-driven microservices architecture",
+        "Machine learning-powered virtual try-on",
+        "3D garment modeling and visualization",
+        "Kubernetes orchestration for scalability",
+        "NATS message broker for event streaming"
       ]
     },
     {
-      title: "Task Management System",
-      description: "Collaborative project management tool with kanban boards, time tracking, and team analytics.",
-      technologies: ["Vue.js", "Express", "MongoDB", "Docker"],
-      image: "📋",
+      title: "Healthy Meal Planner",
+      description: "Intelligent meal planning system based on user preferences, available ingredients, and body composition goals using GraphQL API and OAuth authentication.",
+      technologies: ["TypeScript", "Apollo GraphQL", "PostgreSQL", "OAuth", "Jest", "CI/CD"],
+      image: "🥗",
       highlights: [
-        "Drag-and-drop interface",
-        "Team collaboration features",
-        "Advanced reporting system"
+        "GraphQL API for flexible data queries",
+        "Personalized meal recommendations",
+        "OAuth 2.0 authentication integration",
+        "Ingredient-based meal planning",
+        "Comprehensive test coverage with Jest"
       ]
     },
     {
-      title: "IoT Monitoring Platform",
-      description: "Real-time monitoring dashboard for IoT devices with alerts, analytics, and device management.",
-      technologies: ["React", "MQTT", "Node.js", "InfluxDB", "Grafana"],
-      image: "🌐",
+      title: "Payment Service Optimization",
+      description: "Major performance optimization project at EFG Holding that dramatically reduced payment processing times through parallelization, race condition resolution, and algorithm optimization.",
+      technologies: [".NET", "SQL Server", "Redis", "RabbitMQ", "Microservices"],
+      image: "💳",
       highlights: [
-        "Real-time device monitoring",
-        "Custom alert system",
-        "Historical data analysis"
+        "Resolved race conditions in concurrent processing",
+        "Parallelized client payments for throughput",
+        "Optimized algorithm complexity to O(n log n)",
+        "Limited database trips to two operations",
+        "Achieved significant performance improvements"
       ]
     },
     {
-      title: "Mobile Fitness App",
-      description: "Cross-platform fitness tracking application with workout plans, nutrition tracking, and progress analytics.",
-      technologies: ["React Native", "Firebase", "Redux", "Charts"],
-      image: "💪",
+      title: "Rule Engine Optimization (ValU)",
+      description: "Complete rewrite of a critical rule engine system, achieving 350% performance improvement by separating business logic and dynamic configurations, reducing 95th percentile from 70s to 2s.",
+      technologies: [".NET", "SQL Server", "Performance Optimization"],
+      image: "⚡",
       highlights: [
-        "Cross-platform development",
-        "Offline-first architecture",
-        "Integration with health APIs"
+        "350% performance improvement achieved",
+        "Precompiled rules and formulas",
+        "Lazy evaluation for conditional logic",
+        "Database vertical slicing optimization",
+        "Reduced P95 from 70 seconds to 2 seconds"
       ]
     }
   ]
