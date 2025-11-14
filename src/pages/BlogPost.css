@@ -31,6 +31,9 @@
 .post-icon {
   font-size: 5rem;
   margin-bottom: 1.5rem;
+  color: var(--cosmic-purple);
+  display: flex;
+  justify-content: center;
 }
 
 .post-meta {

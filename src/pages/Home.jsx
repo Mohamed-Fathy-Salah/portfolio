@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Icon from '../components/Icon'
 import './Home.css'
 
 function Home() {
@@ -24,7 +25,8 @@ function Home() {
               Explore My Journey
             </Link>
             <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="cosmic-button secondary">
-              Download CV
+              <Icon name="download" size={20} />
+              <span style={{ marginLeft: '8px' }}>Download CV</span>
             </a>
           </div>
         </div>
@@ -38,31 +40,41 @@ function Home() {
       
       <div className="quick-links">
         <Link to="/experience" className="quick-link-card cosmic-card">
-          <div className="icon">💼</div>
+          <div className="icon">
+            <Icon name="experience" size={60} />
+          </div>
           <h3>Experience</h3>
           <p>Explore my professional journey</p>
         </Link>
         
         <Link to="/skills" className="quick-link-card cosmic-card">
-          <div className="icon">⚡</div>
+          <div className="icon">
+            <Icon name="skills" size={60} />
+          </div>
           <h3>Skills</h3>
           <p>Discover my technical expertise</p>
         </Link>
         
         <Link to="/projects" className="quick-link-card cosmic-card">
-          <div className="icon">🚀</div>
+          <div className="icon">
+            <Icon name="projects" size={60} />
+          </div>
           <h3>Projects</h3>
           <p>View my creative works</p>
         </Link>
         
         <Link to="/blogs" className="quick-link-card cosmic-card">
-          <div className="icon">📝</div>
+          <div className="icon">
+            <Icon name="blog" size={60} />
+          </div>
           <h3>Blog</h3>
           <p>Read technical deep dives</p>
         </Link>
         
         <Link to="/contact" className="quick-link-card cosmic-card">
-          <div className="icon">📬</div>
+          <div className="icon">
+            <Icon name="contact" size={60} />
+          </div>
           <h3>Contact</h3>
           <p>Let's connect and collaborate</p>
         </Link>

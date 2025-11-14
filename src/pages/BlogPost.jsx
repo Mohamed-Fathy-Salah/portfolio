@@ -1,10 +1,19 @@
 import { useParams, Link } from 'react-router-dom'
 import { blogContent } from '../data/blogContent'
+import Icon from '../components/Icon'
 import './BlogPost.css'
 
 function BlogPost() {
   const { id } = useParams()
   const post = blogContent[id]
+  
+  const iconMap = {
+    'valu-rule-engine': 'lightning',
+    'payment-optimization': 'creditCard',
+    'saga-pattern': 'workflow',
+    'database-optimization': 'database',
+    'maskan-architecture': 'realEstate'
+  }
 
   if (!post) {
     return (
@@ -23,7 +32,9 @@ function BlogPost() {
         <Link to="/blogs" className="back-button">← Back to Blogs</Link>
         
         <div className="post-header">
-          <div className="post-icon">{post.icon}</div>
+          <div className="post-icon">
+            <Icon name={iconMap[id] || post.icon} size={80} />
+          </div>
           <div className="post-meta">
             <span className="post-category">{post.category}</span>
             <span className="post-date">{post.date}</span>

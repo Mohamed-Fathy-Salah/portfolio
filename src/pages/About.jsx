@@ -1,3 +1,4 @@
+import Icon from '../components/Icon'
 import './About.css'
 
 function About() {
@@ -31,7 +32,10 @@ function About() {
           
           <div className="about-details">
             <div className="detail-card cosmic-card">
-              <h3>🎯 Mission</h3>
+              <div className="detail-icon">
+                <Icon name="mission" size={50} />
+              </div>
+              <h3>Mission</h3>
               <p>
                 To build robust, high-performance backend systems that solve real-world 
                 problems at scale, while mentoring teams and promoting best practices 
@@ -40,7 +44,10 @@ function About() {
             </div>
             
             <div className="detail-card cosmic-card">
-              <h3>💡 Expertise</h3>
+              <div className="detail-icon">
+                <Icon name="expertise" size={50} />
+              </div>
+              <h3>Expertise</h3>
               <p>
                 Microservices architecture, performance optimization, distributed systems, 
                 clean architecture, and event-driven design. Proficient in .NET ecosystem, 
@@ -49,7 +56,10 @@ function About() {
             </div>
             
             <div className="detail-card cosmic-card">
-              <h3>⚡ Impact</h3>
+              <div className="detail-icon">
+                <Icon name="impact" size={50} />
+              </div>
+              <h3>Impact</h3>
               <p>
                 Reduced API response times by 40%, database load by 70%, and rule engine 
                 execution from 70 seconds to 2 seconds. Led code reviews and mentored 

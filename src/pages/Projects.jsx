@@ -1,3 +1,4 @@
+import Icon from '../components/Icon'
 import './Projects.css'
 
 function Projects() {
@@ -6,7 +7,7 @@ function Projects() {
       title: "Maskan - Real Estate Platform",
       description: "Multi-tenant real estate management web application for brokers, featuring role-based access control, browser caching strategies, CDN integration, and OWASP security compliance. Supports 5,000+ unique visitors per month with real-time notifications.",
       technologies: [".NET", "C#", "PostgreSQL", "ReactJS", "Tailwind", "AWS EC2", "CI/CD"],
-      image: "🏢",
+      icon: "realEstate",
       highlights: [
         "Multi-tenant architecture with role-based access control",
         "Real-time property matching notifications",
@@ -19,7 +20,7 @@ function Projects() {
       title: "Circle - Expense Management",
       description: "Cross-platform expense management application for personal and group use, featuring an optimized algorithm for minimal settlement plans with interactive reports and visual charts for financial insights.",
       technologies: ["TypeScript", "ReactJS", "Expo", "React Native"],
-      image: "💰",
+      icon: "money",
       highlights: [
         "Optimized settlement algorithm for group expenses",
         "Cross-platform (iOS & Android) support",
@@ -32,7 +33,7 @@ function Projects() {
       title: "E-Commerce VTON Platform",
       description: "Event-driven microservice platform for virtual garment shopping, integrating machine learning for virtual try-on capabilities and 3D modeling for realistic garment visualization.",
       technologies: ["TypeScript", "Express", "Python", "FastAPI", "ML", "MongoDB", "Next.js", "NATS", "Kubernetes"],
-      image: "👔",
+      icon: "shirt",
       highlights: [
         "Event-driven microservices architecture",
         "Machine learning-powered virtual try-on",
@@ -45,7 +46,7 @@ function Projects() {
       title: "Healthy Meal Planner",
       description: "Intelligent meal planning system based on user preferences, available ingredients, and body composition goals using GraphQL API and OAuth authentication.",
       technologies: ["TypeScript", "Apollo GraphQL", "PostgreSQL", "OAuth", "Jest", "CI/CD"],
-      image: "🥗",
+      icon: "food",
       highlights: [
         "GraphQL API for flexible data queries",
         "Personalized meal recommendations",
@@ -58,7 +59,7 @@ function Projects() {
       title: "Payment Service Optimization",
       description: "Major performance optimization project at EFG Holding that dramatically reduced payment processing times through parallelization, race condition resolution, and algorithm optimization.",
       technologies: [".NET", "SQL Server", "Redis", "RabbitMQ", "Microservices"],
-      image: "💳",
+      icon: "creditCard",
       highlights: [
         "Resolved race conditions in concurrent processing",
         "Parallelized client payments for throughput",
@@ -71,7 +72,7 @@ function Projects() {
       title: "Rule Engine Optimization (ValU)",
       description: "Complete rewrite of a critical rule engine system, achieving 350% performance improvement by separating business logic and dynamic configurations, reducing 95th percentile from 70s to 2s.",
       technologies: [".NET", "SQL Server", "Performance Optimization"],
-      image: "⚡",
+      icon: "lightning",
       highlights: [
         "350% performance improvement achieved",
         "Precompiled rules and formulas",
@@ -90,7 +91,9 @@ function Projects() {
         <div className="projects-grid">
           {projects.map((project, index) => (
             <div key={index} className="project-card cosmic-card">
-              <div className="project-icon">{project.image}</div>
+              <div className="project-icon">
+                <Icon name={project.icon} size={70} />
+              </div>
               <h2>{project.title}</h2>
               <p className="project-description">{project.description}</p>
               

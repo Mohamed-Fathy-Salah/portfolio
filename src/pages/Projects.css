@@ -21,6 +21,15 @@
 .project-icon {
   font-size: 4rem;
   margin-bottom: 1.5rem;
+  color: var(--cosmic-purple);
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+  color: var(--cosmic-pink);
+  transform: scale(1.1);
 }
 
 .project-card h2 {

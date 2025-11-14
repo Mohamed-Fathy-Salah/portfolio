@@ -1,3 +1,4 @@
+import Icon from '../components/Icon'
 import './Education.css'
 
 function Education() {
@@ -21,37 +22,37 @@ function Education() {
       name: ".NET 8 Microservices Course",
       issuer: "Professional Development",
       year: "2024",
-      icon: "⚙️"
+      icon: "certificate"
     },
     {
       name: "Network Engineering: Low Latency Design",
       issuer: "Professional Development",
       year: "2024",
-      icon: "🌐"
+      icon: "code"
     },
     {
       name: "Node.js + React Microservices",
       issuer: "E-Commerce Architecture",
       year: "2023",
-      icon: "📦"
+      icon: "workflow"
     },
     {
       name: "Database Systems (CMU)",
       issuer: "Carnegie Mellon University",
       year: "2023",
-      icon: "💾"
+      icon: "database"
     },
     {
       name: "Performance Engineering (MIT)",
       issuer: "Massachusetts Institute of Technology",
       year: "2023",
-      icon: "⚡"
+      icon: "lightning"
     },
     {
       name: "EF SET C2 English Certificate",
       issuer: "EF Standard English Test",
       year: "2022",
-      icon: "🌍"
+      icon: "education"
     }
   ]
 
@@ -60,25 +61,25 @@ function Education() {
       name: "Ranked 1st in Bachelor's Class",
       issuer: "Benha University",
       year: "2022",
-      icon: "🏆"
+      icon: "trophy"
     },
     {
       name: "ECPC Qualification - 21st Place",
       issuer: "Egyptian Collegiate Programming Contest",
       year: "2022",
-      icon: "💻"
+      icon: "code"
     },
     {
       name: "ACPC Qualification - 30th Place",
       issuer: "Arab Collegiate Programming Contest",
       year: "2022",
-      icon: "🎯"
+      icon: "mission"
     },
     {
       name: "ECPC Qualification - 118th Place",
       issuer: "Egyptian Collegiate Programming Contest",
       year: "2021",
-      icon: "📊"
+      icon: "chart"
     }
   ]
 
@@ -118,7 +119,9 @@ function Education() {
           <div className="certifications-grid">
             {certifications.map((cert, index) => (
               <div key={index} className="cert-card cosmic-card">
-                <div className="cert-icon">{cert.icon}</div>
+                <div className="cert-icon">
+                  <Icon name={cert.icon} size={50} />
+                </div>
                 <h3>{cert.name}</h3>
                 <p className="cert-issuer">{cert.issuer}</p>
                 <span className="cert-year">{cert.year}</span>
@@ -132,7 +135,9 @@ function Education() {
           <div className="certifications-grid">
             {awards.map((award, index) => (
               <div key={index} className="cert-card cosmic-card">
-                <div className="cert-icon">{award.icon}</div>
+                <div className="cert-icon">
+                  <Icon name={award.icon} size={50} />
+                </div>
                 <h3>{award.name}</h3>
                 <p className="cert-issuer">{award.issuer}</p>
                 <span className="cert-year">{award.year}</span>

@@ -38,6 +38,15 @@
 .blog-icon {
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
+  color: var(--cosmic-purple);
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.blog-card:hover .blog-icon {
+  color: var(--cosmic-pink);
+  transform: scale(1.1);
 }
 
 .blog-meta {

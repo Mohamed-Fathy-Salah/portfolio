@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Icon from '../components/Icon'
 import './Blogs.css'
 
 function Blogs() {
@@ -11,7 +12,7 @@ function Blogs() {
       readTime: "8 min read",
       excerpt: "How we achieved a 350% performance improvement by completely rewriting the rule engine, reducing P95 latency from 70 seconds to 2 seconds.",
       tags: [".NET", "Performance", "Optimization", "Architecture"],
-      icon: "⚡"
+      icon: "lightning"
     },
     {
       id: 'payment-optimization',
@@ -21,7 +22,7 @@ function Blogs() {
       readTime: "6 min read",
       excerpt: "Deep dive into identifying and resolving race conditions in concurrent payment processing while parallelizing operations for better throughput.",
       tags: [".NET", "Concurrency", "SQL Server", "Optimization"],
-      icon: "💳"
+      icon: "creditCard"
     },
     {
       id: 'saga-pattern',
@@ -31,7 +32,7 @@ function Blogs() {
       readTime: "10 min read",
       excerpt: "How we ensured data consistency across 17 microservices using the Saga pattern with RabbitMQ and MassTransit.",
       tags: ["Microservices", "RabbitMQ", "MassTransit", "Saga Pattern"],
-      icon: "🔄"
+      icon: "workflow"
     },
     {
       id: 'database-optimization',
@@ -41,7 +42,7 @@ function Blogs() {
       readTime: "7 min read",
       excerpt: "Strategies for eliminating N+1 queries, implementing Redis caching, and database vertical slicing that cut our DB load by 70%.",
       tags: ["SQL Server", "Redis", "Caching", "Query Optimization"],
-      icon: "💾"
+      icon: "database"
     },
     {
       id: 'maskan-architecture',
@@ -51,7 +52,7 @@ function Blogs() {
       readTime: "12 min read",
       excerpt: "Architecting a scalable multi-tenant platform with role-based access control, real-time notifications, and OWASP security compliance.",
       tags: [".NET", "PostgreSQL", "React", "Multi-Tenancy", "AWS"],
-      icon: "🏢"
+      icon: "realEstate"
     },
     {
       id: 'circle-settlement',
@@ -61,7 +62,7 @@ function Blogs() {
       readTime: "5 min read",
       excerpt: "Designing an efficient algorithm for minimal transaction settlement in group expenses using graph theory.",
       tags: ["TypeScript", "Algorithms", "React Native", "Expo"],
-      icon: "💰"
+      icon: "money"
     },
     {
       id: 'data-migration',
@@ -71,7 +72,7 @@ function Blogs() {
       readTime: "6 min read",
       excerpt: "Automating the transformation of unstructured Excel and Word documents into structured relational data before system go-live.",
       tags: ["Python", ".NET", "SQL Server", "ETL"],
-      icon: "📊"
+      icon: "chart"
     },
     {
       id: 'clean-architecture',
@@ -81,7 +82,7 @@ function Blogs() {
       readTime: "9 min read",
       excerpt: "Implementing Clean Architecture principles across 17 microservices for maintainability and testability.",
       tags: [".NET", "Clean Architecture", "SOLID", "Design Patterns"],
-      icon: "🎯"
+      icon: "architecture"
     },
     {
       id: 'ecommerce-vton',
@@ -91,7 +92,7 @@ function Blogs() {
       readTime: "10 min read",
       excerpt: "Building an event-driven microservices platform with ML integration for virtual garment try-on and 3D visualization.",
       tags: ["TypeScript", "Python", "ML", "Kubernetes", "NATS"],
-      icon: "👔"
+      icon: "shirt"
     },
     {
       id: 'owasp-security',
@@ -101,7 +102,7 @@ function Blogs() {
       readTime: "8 min read",
       excerpt: "Implementing security best practices across microservices architecture following OWASP guidelines.",
       tags: ["Security", "OWASP", ".NET", "Authentication"],
-      icon: "🔒"
+      icon: "security"
     }
   ]
 
@@ -120,7 +121,9 @@ function Blogs() {
               to={`/blog/${post.id}`} 
               className="blog-card cosmic-card"
             >
-              <div className="blog-icon">{post.icon}</div>
+              <div className="blog-icon">
+                <Icon name={post.icon} size={60} />
+              </div>
               <div className="blog-meta">
                 <span className="blog-category">{post.category}</span>
                 <span className="blog-date">{post.date}</span>
