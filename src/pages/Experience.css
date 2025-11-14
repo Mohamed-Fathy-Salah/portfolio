@@ -1,0 +1,136 @@
+.experience {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--cosmic-purple), var(--cosmic-pink));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cosmic-purple), var(--cosmic-pink));
+  box-shadow: 0 0 20px rgba(157, 78, 221, 0.8);
+  z-index: 2;
+}
+
+.timeline-content {
+  width: calc(50% - 40px);
+  margin-left: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.exp-header h2 {
+  font-size: 1.8rem;
+  color: var(--cosmic-purple);
+  margin-bottom: 0.5rem;
+}
+
+.exp-header h3 {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.period {
+  background: linear-gradient(135deg, var(--cosmic-purple), var(--cosmic-pink));
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.exp-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.achievements h4 {
+  color: var(--cosmic-cyan);
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.achievements ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.achievements li {
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  position: relative;
+  line-height: 1.6;
+}
+
+.achievements li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--cosmic-purple);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-marker {
+    left: 20px;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+  }
+  
+  .exp-header h2 {
+    font-size: 1.4rem;
+  }
+  
+  .exp-header h3 {
+    font-size: 1.1rem;
+  }
+}

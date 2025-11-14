@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cosmic-purple: #9d4edd;
+  --cosmic-pink: #ff006e;
+  --cosmic-blue: #3a0ca3;
+  --cosmic-dark: #0a0a0f;
+  --cosmic-darker: #050508;
+  --cosmic-cyan: #00f5ff;
+  --cosmic-yellow: #ffd60a;
+  --text-primary: #ffffff;
+  --text-secondary: #b8b8d1;
+  --glow-color: rgba(157, 78, 221, 0.6);
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background: var(--cosmic-darker);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cosmic-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--cosmic-purple), var(--cosmic-pink));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--cosmic-pink), var(--cosmic-purple));
+}

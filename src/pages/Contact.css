@@ -1,0 +1,155 @@
+.contact {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.contact-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.info-card {
+  text-align: center;
+  padding: 2rem;
+}
+
+.info-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.info-card h3 {
+  font-size: 1.4rem;
+  color: var(--cosmic-purple);
+  margin-bottom: 0.5rem;
+}
+
+.info-card p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.social-links {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.social-links h2 {
+  font-size: 2rem;
+  color: var(--cosmic-purple);
+  margin-bottom: 2rem;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon {
+  font-size: 2.5rem;
+}
+
+.social-card span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.social-card:hover {
+  transform: translateY(-10px);
+}
+
+.contact-form-section {
+  padding: 3rem;
+}
+
+.contact-form-section h2 {
+  font-size: 2rem;
+  color: var(--cosmic-purple);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(157, 78, 221, 0.1);
+  border: 1px solid rgba(157, 78, 221, 0.3);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-family: 'Rajdhani', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--cosmic-purple);
+  box-shadow: 0 0 15px rgba(157, 78, 221, 0.3);
+  background: rgba(157, 78, 221, 0.15);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form .cosmic-button {
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contact-form-section {
+    padding: 2rem;
+  }
+  
+  .contact-form .cosmic-button {
+    align-self: stretch;
+  }
+}

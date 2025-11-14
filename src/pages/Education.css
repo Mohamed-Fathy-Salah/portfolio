@@ -1,0 +1,147 @@
+.education {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.section-heading {
+  font-size: 2.2rem;
+  color: var(--cosmic-purple);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.education-section {
+  margin-bottom: 4rem;
+}
+
+.education-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.education-card {
+  padding: 2.5rem;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.edu-header h3 {
+  font-size: 1.6rem;
+  color: var(--cosmic-purple);
+  margin-bottom: 0.5rem;
+}
+
+.edu-header h4 {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.period {
+  background: linear-gradient(135deg, var(--cosmic-purple), var(--cosmic-pink));
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.edu-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.achievements h5 {
+  color: var(--cosmic-cyan);
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.achievements ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.achievements li {
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  position: relative;
+  line-height: 1.6;
+}
+
+.achievements li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--cosmic-purple);
+  font-size: 1.2rem;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cert-card {
+  text-align: center;
+  padding: 2.5rem 2rem;
+}
+
+.cert-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cert-card h3 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+.cert-issuer {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.cert-year {
+  display: inline-block;
+  background: rgba(157, 78, 221, 0.2);
+  border: 1px solid var(--cosmic-purple);
+  padding: 0.4rem 1rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: var(--cosmic-cyan);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 1.8rem;
+  }
+  
+  .edu-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
