@@ -1,18 +1,35 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { experiences, projects, awards, education } from '../data/portfolio';
-import type { Experience, Education } from '../data/portfolio';
+import type { Experience, Education, DetailItem, DetailLine } from '../data/portfolio';
 import { ArrowLeft, ExternalLink, Calendar, Building, Award, GraduationCap } from 'lucide-react';
+import { Modal } from '../components/ui/Modal';
 
 
 export const DetailView: React.FC = () => {
     const { id } = useParams();
     const navigate = useNavigate();
 
+    const [modalOpen, setModalOpen] = useState(false);
+    const [modalTitle, setModalTitle] = useState('');
+    const [modalContent, setModalContent] = useState<DetailLine[]>([]);
+
     const item = useMemo(() => {
         const allItems = [...experiences, ...projects, ...awards, ...education];
         return allItems.find(i => i.id === id);
     }, [id]);
+
+    const handleDetailClick = (detail: DetailItem) => {
+        if (detail.detailedContent && detail.detailedContent.length > 0) {
+            setModalTitle(detail.summary);
+            setModalContent(detail.detailedContent);
+            setModalOpen(true);
+        }
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
+    };
 
     if (!item) {
         return (
@@ -97,10 +114,19 @@ export const DetailView: React.FC = () => {
                         <div>
                             <h3 className="text-xl font-semibold text-white mb-4">Key Achievements</h3>
                             <ul className="space-y-3">
-                                {(isExp as Experience).details.map((detail: string, i: number) => (
-                                    <li key={i} className="flex gap-3">
+                                {(isExp as Experience).details.map((detail: DetailItem, i: number) => (
+                                    <li
+                                        key={i}
+                                        className={`flex gap-3 ${detail.detailedContent && detail.detailedContent.length > 0
+                                            ? 'cursor-pointer hover:bg-slate-800/50 -mx-3 px-3 py-2 rounded-lg transition-colors'
+                                            : ''
+                                            }`}
+                                        onClick={() => handleDetailClick(detail)}
+                                    >
                                         <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2.5 flex-shrink-0" />
-                                        <span>{detail}</span>
+                                        <span className={detail.detailedContent && detail.detailedContent.length > 0 ? 'hover:text-blue-400 transition-colors' : ''}>
+                                            {detail.summary}
+                                        </span>
                                     </li>
                                 ))}
                             </ul>
@@ -112,10 +138,19 @@ export const DetailView: React.FC = () => {
                         <div>
                             <h3 className="text-xl font-semibold text-white mb-4">Academic Highlights</h3>
                             <ul className="space-y-3">
-                                {(isEdu as Education).details?.map((detail: string, i: number) => (
-                                    <li key={i} className="flex gap-3">
+                                {(isEdu as Education).details?.map((detail: DetailItem, i: number) => (
+                                    <li
+                                        key={i}
+                                        className={`flex gap-3 ${detail.detailedContent && detail.detailedContent.length > 0
+                                            ? 'cursor-pointer hover:bg-slate-800/50 -mx-3 px-3 py-2 rounded-lg transition-colors'
+                                            : ''
+                                            }`}
+                                        onClick={() => handleDetailClick(detail)}
+                                    >
                                         <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2.5 flex-shrink-0" />
-                                        <span>{detail}</span>
+                                        <span className={detail.detailedContent && detail.detailedContent.length > 0 ? 'hover:text-blue-400 transition-colors' : ''}>
+                                            {detail.summary}
+                                        </span>
                                     </li>
                                 ))}
                             </ul>
@@ -153,6 +188,13 @@ export const DetailView: React.FC = () => {
 
                 </div>
             </div>
+
+            <Modal
+                isOpen={modalOpen}
+                onClose={closeModal}
+                title={modalTitle}
+                content={modalContent}
+            />
         </div>
     );
 };
