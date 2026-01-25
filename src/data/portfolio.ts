@@ -117,6 +117,14 @@ export const experiences: Experience[] = [
                             {
                                 type: 'text',
                                 content: 'A .NET service that calculates a user’s credit limit based on attributes (location, car, phone, etc.) using a database-driven rule engine.'
+                            },
+                            {
+                                type: 'image',
+                                content: '../../public/rule-engine-tables.png'
+                            },
+                            {
+                                type: 'image',
+                                content: '../../public/rule-engine-tree.png'
                             }
                         ]
                     }, {
