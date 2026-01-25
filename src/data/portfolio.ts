@@ -1,6 +1,7 @@
 export type DetailLine = {
     type: 'text' | 'image';
     content: string; // text content or image URL
+    detailedContent?: DetailLine[];
 };
 
 export type DetailItem = {
@@ -72,7 +73,7 @@ export const experiences: Experience[] = [
         description: 'Maintained and enhanced 17 microservices with a strong focus on performance, scalability, security, and consistency.',
         details: [
             {
-                summary: 'Payment Service Optimization: Reduced execution time by resolving race conditions, parallelizing payments, and optimizing complexity to O(n log n).',
+                summary: 'Payment Service Optimization.',
                 detailedContent: [
                     {
                         type: 'text',
@@ -80,19 +81,25 @@ export const experiences: Experience[] = [
                     },
                     {
                         type: 'text',
-                        content: 'Key improvements implemented:'
-                    },
-                    {
-                        type: 'text',
-                        content: '• Identified and resolved race conditions by implementing proper locking mechanisms and transaction isolation levels'
-                    },
-                    {
-                        type: 'text',
-                        content: '• Parallelized independent payment operations using async/await patterns and Task.WhenAll for concurrent processing'
-                    },
-                    {
-                        type: 'text',
-                        content: '• Optimized the payment validation algorithm from O(n²) to O(n log n) by replacing nested loops with efficient sorting and binary search'
+                        content: 'Key improvements implemented:',
+                        detailedContent: [
+                            {
+                                type: 'text',
+                                content: 'Identified and resolved race conditions by implementing proper locking mechanisms and transaction isolation levels'
+                            },
+                            {
+                                type: 'text',
+                                content: 'Limiting database interactions to two trips, one for read and the other for update'
+                            },
+                            {
+                                type: 'text',
+                                content: 'Parallelized independent payment operations using async/await patterns and Task.WhenAll for concurrent processing'
+                            },
+                            {
+                                type: 'text',
+                                content: 'Optimized the payment algorithm from O(n²) to O(n log n) by using a priority queue'
+                            }
+                        ]
                     },
                     {
                         type: 'text',
@@ -101,7 +108,75 @@ export const experiences: Experience[] = [
                 ]
             },
             {
-                summary: 'Rule Engine Optimization (ValU): Improved execution time by 350x via precompiling rules, lazy evaluation, and vertical slicing.',
+                summary: 'ValU Rule Engine Optimization.',
+                detailedContent: [
+                    {
+                        type: 'text',
+                        content: 'What is it?',
+                        detailedContent: [
+                            {
+                                type: 'text',
+                                content: 'A .NET service that calculates a user’s credit limit based on attributes (location, car, phone, etc.) using a database-driven rule engine.'
+                            }
+                        ]
+                    }, {
+                        type: 'text',
+                        content: 'Problem',
+                        detailedContent: [
+                            {
+                                type: 'text',
+                                content: 'Each request took ~75s due to heavy network round trips and complex DB joins. Under peak load (e.g., Black Friday), this caused severe latency and manual firefighting.'
+                            }
+                        ]
+                    }, {
+                        type: 'text',
+                        content: '1st Proposed Solution: Precompiled Rules (network bottleneck)',
+                        detailedContent: [
+                            {
+                                type: 'text',
+                                content: 'Built a compiler for the T-SQL–like rules using ANTLR and regex and implemented lazy condition evaluation.'
+                            },
+                            {
+                                type: 'text',
+                                content: 'Compiled each rule tree into a single stored procedure.'
+                            },
+                            {
+                                type: 'text',
+                                content: 'Result: ~30 seconds per request'
+                            },
+                        ]
+                    }, {
+                        type: 'text',
+                        content: '2nd Proposed Solution: In-code rule execution (DB bottleneck)',
+                        detailedContent: [
+                            {
+                                type: 'text',
+                                content: 'Rewrote the engine to execute rules in code; kept only configurations in the DB.'
+                            },
+                            {
+                                type: 'text',
+                                content: 'Result: ~3 seconds per request'
+                            },
+                        ]
+                    },{
+                        type: 'text',
+                        content: '3rd Proposed Solution: Simplified architecture (unnecessary complexity)',
+                        detailedContent: [
+                            {
+                                type: 'text',
+                                content: 'Analyzed rule trees; found they were effectively linear (linked lists), not real trees.'
+                            },
+                            {
+                                type: 'text',
+                                content: 'Rebuilt as a simple n-tier service with confiurations in the database.'
+                            },
+                            {
+                                type: 'text',
+                                content: 'Result: ~1.5 seconds per request, much lower complexity'
+                            },
+                        ]
+                    }
+                ]
             },
             {
                 summary: 'Distributed Transactions: Implemented Saga Pattern for consistent distributed transaction management.',

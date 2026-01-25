@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { experiences, projects, awards, education } from '../data/portfolio';
 import type { Experience, Education, DetailItem, DetailLine } from '../data/portfolio';
-import { ArrowLeft, ExternalLink, Calendar, Building, Award, GraduationCap } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Calendar, Building, Award, GraduationCap, ChevronRight } from 'lucide-react';
 import { Modal } from '../components/ui/Modal';
 
 
@@ -117,16 +117,21 @@ export const DetailView: React.FC = () => {
                                 {(isExp as Experience).details.map((detail: DetailItem, i: number) => (
                                     <li
                                         key={i}
-                                        className={`flex gap-3 ${detail.detailedContent && detail.detailedContent.length > 0
-                                            ? 'cursor-pointer hover:bg-slate-800/50 -mx-3 px-3 py-2 rounded-lg transition-colors'
+                                        className={`flex gap-3 items-start ${detail.detailedContent && detail.detailedContent.length > 0
+                                            ? 'cursor-pointer hover:bg-slate-800/50 -mx-3 px-3 py-2 rounded-lg transition-colors group/item'
                                             : ''
                                             }`}
                                         onClick={() => handleDetailClick(detail)}
                                     >
-                                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2.5 flex-shrink-0" />
-                                        <span className={detail.detailedContent && detail.detailedContent.length > 0 ? 'hover:text-blue-400 transition-colors' : ''}>
-                                            {detail.summary}
-                                        </span>
+                                        <span className={`w-1.5 h-1.5 rounded-full bg-blue-500 mt-2.5 flex-shrink-0 ${detail.detailedContent && detail.detailedContent.length > 0 ? 'group-hover/item:scale-125 transition-transform' : ''}`} />
+                                        <div className="flex-1">
+                                            <span className={detail.detailedContent && detail.detailedContent.length > 0 ? 'group-hover/item:text-blue-400 transition-colors font-medium block' : ''}>
+                                                {detail.summary}
+                                            </span>
+                                        </div>
+                                        {detail.detailedContent && detail.detailedContent.length > 0 && (
+                                            <ChevronRight className="w-4 h-4 text-slate-500 mt-1 group-hover/item:text-blue-400 group-hover/item:translate-x-1 transition-all" />
+                                        )}
                                     </li>
                                 ))}
                             </ul>
@@ -141,16 +146,21 @@ export const DetailView: React.FC = () => {
                                 {(isEdu as Education).details?.map((detail: DetailItem, i: number) => (
                                     <li
                                         key={i}
-                                        className={`flex gap-3 ${detail.detailedContent && detail.detailedContent.length > 0
-                                            ? 'cursor-pointer hover:bg-slate-800/50 -mx-3 px-3 py-2 rounded-lg transition-colors'
+                                        className={`flex gap-3 items-start ${detail.detailedContent && detail.detailedContent.length > 0
+                                            ? 'cursor-pointer hover:bg-slate-800/50 -mx-3 px-3 py-2 rounded-lg transition-colors group/item'
                                             : ''
                                             }`}
                                         onClick={() => handleDetailClick(detail)}
                                     >
                                         <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2.5 flex-shrink-0" />
-                                        <span className={detail.detailedContent && detail.detailedContent.length > 0 ? 'hover:text-blue-400 transition-colors' : ''}>
-                                            {detail.summary}
-                                        </span>
+                                        <div className="flex-1">
+                                            <span className={detail.detailedContent && detail.detailedContent.length > 0 ? 'group-hover/item:text-blue-400 transition-colors font-medium block' : ''}>
+                                                {detail.summary}
+                                            </span>
+                                        </div>
+                                        {detail.detailedContent && detail.detailedContent.length > 0 && (
+                                            <ChevronRight className="w-4 h-4 text-slate-500 mt-1 group-hover/item:text-blue-400 group-hover/item:translate-x-1 transition-all" />
+                                        )}
                                     </li>
                                 ))}
                             </ul>
