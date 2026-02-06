@@ -69,7 +69,7 @@ export const experiences: Experience[] = [
         id: 'efg',
         role: 'Backend Engineer',
         company: 'EFG Holding – AFKAR Technology',
-        period: 'Apr 2024 – Present',
+        period: 'Apr 2024 – Feb 2026',
         description: 'Maintained and enhanced 17 microservices with a strong focus on performance, scalability, security, and consistency.',
         details: [
             {
@@ -166,7 +166,7 @@ export const experiences: Experience[] = [
                                 content: 'Result: ~3 seconds per request'
                             },
                         ]
-                    },{
+                    }, {
                         type: 'text',
                         content: '3rd Proposed Solution: Simplified architecture (unnecessary complexity)',
                         detailedContent: [
@@ -234,7 +234,7 @@ export const projects: Project[] = [
         title: 'Maskan',
         description: 'Multi-tenant real estate management platform.',
         longDescription: 'Multi-tenant real estate management web application for brokers, featuring role-based access control, browser caching strategies, CDN integration, and compliance with OWASP security best practices; supports 5,000+ unique visitors per month.',
-        techStack: ['.NET', 'C#', 'PostgreSQL', 'ReactJS', 'Tailwind', 'AWS EC2', 'CICD']
+        techStack: ['.NET', 'C#', 'PostgreSQL', 'ReactJS', 'Tailwind', 'TypeScript', 'AWS EC2', 'CI/CD']
     },
     {
         id: 'circle',
