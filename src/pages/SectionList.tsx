@@ -10,6 +10,8 @@ interface Item {
     description: string;
     skills?: string[];
     techStack?: string[];
+    icon?: string;
+    link?: string;
     [key: string]: any;
 }
 
@@ -37,6 +39,8 @@ export const SectionList: React.FC<SectionListProps> = ({ title, items, type }) 
                             subtitle={item.company || item.issuer || item.date}
                             description={item.description}
                             tags={item.skills || item.techStack}
+                            icon={item.icon}
+                            link={item.link}
                             onClick={() => navigate(`/${type}s/${item.id}`)}
                             className="hover:shadow-xl hover:shadow-blue-900/10"
                         />

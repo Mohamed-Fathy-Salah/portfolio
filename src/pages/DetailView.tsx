@@ -49,6 +49,7 @@ export const DetailView: React.FC = () => {
     const getTitle = () => (item as any).title || (item as any).role || (item as any).degree;
     const getSubtitle = () => (item as any).company || (item as any).issuer || (item as any).institution;
     const getDate = () => (item as any).period || (item as any).date;
+    const getIcon = () => (item as any).icon;
     const getLink = () => (item as any).link;
     const getLongDesc = () => (item as any).longDescription || (item as any).description;
     const getTags = () => (item as any).skills || (item as any).techStack || [];
@@ -66,26 +67,50 @@ export const DetailView: React.FC = () => {
             <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 shadow-2xl backdrop-blur-sm">
                 <header className="mb-8 border-b border-slate-800 pb-8">
                     <div className="flex justify-between items-start gap-4">
-                        <div>
-                            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-                                {getTitle()}
-                            </h1>
+                        <div className="flex items-center gap-6">
+                            {getIcon() && (
+                                getLink() ? (
+                                    <a
+                                        href={getLink()}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block hover:scale-105 transition-transform"
+                                    >
+                                        <img
+                                            src={getIcon()}
+                                            alt={getTitle()}
+                                            className="w-16 h-16 object-contain p-2 bg-white/5 rounded-xl border border-white/10"
+                                        />
+                                    </a>
+                                ) : (
+                                    <img
+                                        src={getIcon()}
+                                        alt={getTitle()}
+                                        className="w-16 h-16 object-contain p-2 bg-white/5 rounded-xl border border-white/10"
+                                    />
+                                )
+                            )}
+                            <div>
+                                <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                                    {getTitle()}
+                                </h1>
 
-                            <div className="flex flex-wrap gap-4 text-slate-400 mt-4">
-                                {getSubtitle() && (
-                                    <div className="flex items-center gap-2">
-                                        {isAward ? <Award className="w-4 h-4" /> :
-                                            isEdu ? <GraduationCap className="w-4 h-4" /> :
-                                                <Building className="w-4 h-4" />}
-                                        <span>{getSubtitle()}</span>
-                                    </div>
-                                )}
-                                {getDate() && (
-                                    <div className="flex items-center gap-2">
-                                        <Calendar className="w-4 h-4" />
-                                        <span>{getDate()}</span>
-                                    </div>
-                                )}
+                                <div className="flex flex-wrap gap-4 text-slate-400 mt-4">
+                                    {getSubtitle() && (
+                                        <div className="flex items-center gap-2">
+                                            {isAward ? <Award className="w-4 h-4" /> :
+                                                isEdu ? <GraduationCap className="w-4 h-4" /> :
+                                                    <Building className="w-4 h-4" />}
+                                            <span>{getSubtitle()}</span>
+                                        </div>
+                                    )}
+                                    {getDate() && (
+                                        <div className="flex items-center gap-2">
+                                            <Calendar className="w-4 h-4" />
+                                            <span>{getDate()}</span>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         </div>
 
@@ -94,7 +119,7 @@ export const DetailView: React.FC = () => {
                                 href={getLink()}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-3 bg-blue-600/10 text-blue-400 rounded-full hover:bg-blue-600 hover:text-white transition-all"
+                                className="p-3 bg-blue-600/10 text-blue-400 rounded-full hover:bg-blue-600 hover:text-white transition-all shadow-lg shadow-blue-500/10"
                             >
                                 <ExternalLink className="w-5 h-5" />
                             </a>

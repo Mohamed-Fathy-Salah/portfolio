@@ -27,6 +27,7 @@ export type Project = {
     techStack: string[];
     link?: string;
     image?: string;
+    icon?: string;
 };
 
 export type AwardItem = {
@@ -234,14 +235,18 @@ export const projects: Project[] = [
         title: 'Maskan',
         description: 'Multi-tenant real estate management platform.',
         longDescription: 'Multi-tenant real estate management web application for brokers, featuring role-based access control, browser caching strategies, CDN integration, and compliance with OWASP security best practices; supports 5,000+ unique visitors per month.',
-        techStack: ['.NET', 'C#', 'PostgreSQL', 'ReactJS', 'Tailwind', 'TypeScript', 'AWS EC2', 'CI/CD']
+        techStack: ['.NET', 'C#', 'PostgreSQL', 'ReactJS', 'Tailwind', 'TypeScript', 'AWS EC2', 'CI/CD'],
+        link: 'https://maskan.site',
+        icon: '/maskan.svg'
     },
     {
         id: 'circle',
         title: 'Circle',
         description: 'Cross-platform expense management application.',
         longDescription: 'Cross-platform expense management application for personal and group use, featuring an optimized algorithm for minimal settlement plans, interactive reports, and visual charts.',
-        techStack: ['TypeScript', 'ReactJS', 'Expo']
+        techStack: ['TypeScript', 'ReactJS', 'Expo'],
+        link: 'https://circle.dev',
+        icon: '/circle.svg'
     },
     {
         id: 'vton',
