@@ -245,6 +245,7 @@ export const projects: Project[] = [
         description: 'Cross-platform expense management application.',
         longDescription: 'Cross-platform expense management application for personal and group use, featuring an easy way for tracking expense/income/transfer/group expense/group income, optimized algorithm for minimal settlement plans, and interactive reports.',
         techStack: ['TypeScript', 'React Native', 'sqlite', 'Expo'],
+        link: 'https://circle.mohamedfathy29908.workers.dev/',
         icon: '/circle.svg'
     },
     {
