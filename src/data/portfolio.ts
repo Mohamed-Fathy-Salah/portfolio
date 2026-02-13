@@ -40,6 +40,7 @@ export type AwardItem = {
 
 export type Education = {
     id: string;
+    title: string;
     degree: string;
     institution: string;
     period: string;
@@ -50,6 +51,7 @@ export type Education = {
 export const education: Education[] = [
     {
         id: 'benha',
+        title: 'Benha University',
         degree: 'Bachelor of Science in Computer Engineering',
         institution: 'Benha University',
         period: '2017 – 2022',
@@ -245,7 +247,7 @@ export const projects: Project[] = [
         description: 'Cross-platform expense management application.',
         longDescription: 'Cross-platform expense management application for personal and group use, featuring an easy way for tracking expense/income/transfer/group expense/group income, optimized algorithm for minimal settlement plans, and interactive reports.',
         techStack: ['TypeScript', 'React Native', 'sqlite', 'Expo'],
-        link: 'https://circle.mohamedfathy29908.workers.dev/',
+        link: 'https://circle0.netlify.app',
         icon: '/circle.svg'
     },
     {
