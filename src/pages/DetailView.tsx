@@ -4,6 +4,7 @@ import { experiences, projects, awards, education } from '../data/portfolio';
 import type { Experience, Education, DetailItem, DetailLine } from '../data/portfolio';
 import { ArrowLeft, ExternalLink, Calendar, Building, Award, GraduationCap, ChevronRight } from 'lucide-react';
 import { Modal } from '../components/ui/Modal';
+import { formatDuration, getExperienceDuration } from '../utils/experienceUtils';
 
 
 export const DetailView: React.FC = () => {
@@ -107,7 +108,14 @@ export const DetailView: React.FC = () => {
                                     {getDate() && (
                                         <div className="flex items-center gap-2">
                                             <Calendar className="w-4 h-4" />
-                                            <span>{getDate()}</span>
+                                            <span>
+                                                {getDate()}
+                                                {isExp && (isExp as Experience).period && (
+                                                    <span className="ml-2 text-slate-500">
+                                                        ({formatDuration(getExperienceDuration((isExp as Experience).period).years, getExperienceDuration((isExp as Experience).period).months)})
+                                                    </span>
+                                                )}
+                                            </span>
                                         </div>
                                     )}
                                 </div>

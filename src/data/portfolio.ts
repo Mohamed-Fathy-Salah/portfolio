@@ -69,6 +69,15 @@ export const education: Education[] = [
 
 export const experiences: Experience[] = [
     {
+        id: 'luciq',
+        role: 'Backend Engineer',
+        company: 'Luciq / Instabug',
+        period: 'Feb 2026 - Present',
+        description: '',
+        details: [],
+        skills: ['Ruby', 'Go', 'MySql', 'Redis', 'ClickHouse', 'Elastic Search', 'Kubernetes', 'AWS', 'Jenkins']
+    },
+    {
         id: 'efg',
         role: 'Backend Engineer',
         company: 'EFG Holding – AFKAR Technology',
@@ -208,7 +217,7 @@ export const experiences: Experience[] = [
         id: 'self',
         role: 'Backend Engineer',
         company: 'Self Employed',
-        period: 'Jun 2022 – Present',
+        period: 'Jun 2022 – Apr 2024',
         description: 'Developed scalable backend solutions for freelance projects and automation scripts.',
         details: [
             {
