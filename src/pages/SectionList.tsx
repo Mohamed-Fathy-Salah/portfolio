@@ -8,7 +8,7 @@ interface Item {
     role?: string;
     company?: string;
     title?: string;
-    description: string;
+    description?: string;
     skills?: string[];
     techStack?: string[];
     icon?: string;
@@ -20,7 +20,7 @@ interface Item {
 interface SectionListProps {
     title: string;
     items: Item[];
-    type: 'experience' | 'project' | 'award' | 'education';
+    type: 'experience' | 'project' | 'award' | 'education' | 'course';
 }
 
 export const SectionList: React.FC<SectionListProps> = ({ title, items, type }) => {
@@ -59,6 +59,16 @@ export const SectionList: React.FC<SectionListProps> = ({ title, items, type }) 
                         );
                     }
 
+                    const handleClick = () => {
+                        if (type === 'course') {
+                            if (item.link) {
+                                window.open(item.link, '_blank', 'noopener,noreferrer');
+                            }
+                        } else {
+                            navigate(`/${type}s/${item.id}`);
+                        }
+                    };
+
                     return (
                         <div key={item.id} style={{ animationDelay: `${index * 100}ms` }} className="animate-in fade-in slide-in-from-bottom-4 fill-mode-backwards">
                             <Card
@@ -69,7 +79,7 @@ export const SectionList: React.FC<SectionListProps> = ({ title, items, type }) 
                                 icon={item.icon}
                                 link={item.link}
                                 rightContent={rightContent}
-                                onClick={() => navigate(`/${type}s/${item.id}`)}
+                                onClick={type === 'course' && !item.link ? undefined : handleClick}
                                 className="hover:shadow-xl hover:shadow-blue-900/10"
                             />
                         </div>

@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { experiences, projects, awards, education } from '../data/portfolio';
+import { experiences, projects, awards, education, coursesAndBooks } from '../data/portfolio';
 import type { Experience, Education, DetailItem, DetailLine } from '../data/portfolio';
-import { ArrowLeft, ExternalLink, Calendar, Building, Award, GraduationCap, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Calendar, Building, Award, GraduationCap, ChevronRight, BookOpen } from 'lucide-react';
 import { Modal } from '../components/ui/Modal';
 import { formatDuration, getExperienceDuration } from '../utils/experienceUtils';
 
@@ -16,8 +16,8 @@ export const DetailView: React.FC = () => {
     const [modalContent, setModalContent] = useState<DetailLine[]>([]);
 
     const item = useMemo(() => {
-        const allItems = [...experiences, ...projects, ...awards, ...education];
-        return allItems.find(i => i.id === id);
+        const allItems = [...experiences, ...projects, ...awards, ...education, ...coursesAndBooks];
+        return (allItems as any[]).find(i => i.id === id);
     }, [id]);
 
     const handleDetailClick = (detail: DetailItem) => {
@@ -45,6 +45,7 @@ export const DetailView: React.FC = () => {
     const isExp = experiences.find(e => e.id === id);
     const isAward = awards.find(a => a.id === id);
     const isEdu = education.find(e => e.id === id);
+    const isCourse = coursesAndBooks.find(c => c.id === id);
 
     // Helpers for type safety
     const getTitle = () => (item as any).title || (item as any).role || (item as any).degree;
@@ -101,7 +102,8 @@ export const DetailView: React.FC = () => {
                                         <div className="flex items-center gap-2">
                                             {isAward ? <Award className="w-4 h-4" /> :
                                                 isEdu ? <GraduationCap className="w-4 h-4" /> :
-                                                    <Building className="w-4 h-4" />}
+                                                    isCourse ? <BookOpen className="w-4 h-4" /> :
+                                                        <Building className="w-4 h-4" />}
                                             <span>{getSubtitle()}</span>
                                         </div>
                                     )}

@@ -3,7 +3,7 @@ import { Layout } from './components/layout/Layout';
 import { Home } from './pages/Home';
 import { SectionList } from './pages/SectionList';
 import { DetailView } from './pages/DetailView';
-import { experiences, projects, awards, education } from './data/portfolio';
+import { experiences, projects, awards, education, coursesAndBooks } from './data/portfolio';
 
 function App() {
   return (
@@ -26,6 +26,10 @@ function App() {
 
           <Route path="education" element={
             <SectionList title="Education" items={education} type="education" />
+          } />
+
+          <Route path="courses" element={
+            <SectionList title="Courses & Books" items={coursesAndBooks} type="course" />
           } />
 
           {/* Details Routes - using the same component but generic generic path */}

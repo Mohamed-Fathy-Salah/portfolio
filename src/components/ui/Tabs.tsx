@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Briefcase, FolderGit2, Award, GraduationCap } from 'lucide-react';
+import { Home, Briefcase, FolderGit2, Award, GraduationCap, BookOpen } from 'lucide-react';
 
 export const Tabs: React.FC = () => {
     const location = useLocation();
@@ -9,6 +9,7 @@ export const Tabs: React.FC = () => {
         { label: 'Home', path: '/', icon: <Home className="w-4 h-4" /> },
         { label: 'Experience', path: '/experience', icon: <Briefcase className="w-4 h-4" /> },
         { label: 'Projects', path: '/projects', icon: <FolderGit2 className="w-4 h-4" /> },
+        { label: 'Courses', path: '/courses', icon: <BookOpen className="w-4 h-4" /> },
         { label: 'Awards', path: '/awards', icon: <Award className="w-4 h-4" /> },
         { label: 'Education', path: '/education', icon: <GraduationCap className="w-4 h-4" /> },
     ];

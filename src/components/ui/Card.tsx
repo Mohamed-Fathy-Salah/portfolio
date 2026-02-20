@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react';
 interface CardProps {
     title: string;
     subtitle?: string;
-    description: string;
+    description?: string;
     tags?: string[];
     icon?: string;
     link?: string;
@@ -17,7 +17,7 @@ export const Card: React.FC<CardProps> = ({ title, subtitle, description, tags, 
     return (
         <div
             onClick={onClick}
-            className={`bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 hover:bg-slate-800/50 transition-all duration-300 cursor-pointer group ${className}`}
+            className={`bg-slate-900 border border-slate-800 rounded-xl p-6 transition-all duration-300 ${onClick ? 'hover:border-blue-500/50 hover:bg-slate-800/50 cursor-pointer group' : 'cursor-default'} ${className}`}
         >
             <div className="flex justify-between items-start mb-2">
                 <div className="flex items-center gap-4 flex-1">
@@ -37,7 +37,7 @@ export const Card: React.FC<CardProps> = ({ title, subtitle, description, tags, 
                         )
                     )}
                     <div className="flex-1 min-w-0">
-                        <h3 className="text-xl font-bold text-slate-100 group-hover:text-blue-400 transition-colors truncate">{title}</h3>
+                        <h3 className={`text-xl font-bold text-slate-100 transition-colors truncate ${onClick ? 'group-hover:text-blue-400' : ''}`}>{title}</h3>
                         {subtitle && <p className="text-sm text-slate-400 mt-1">{subtitle}</p>}
                     </div>
                 </div>
@@ -47,7 +47,9 @@ export const Card: React.FC<CardProps> = ({ title, subtitle, description, tags, 
                             {rightContent}
                         </div>
                     )}
-                    <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-blue-400 transform group-hover:translate-x-1 transition-all shrink-0" />
+                    {onClick && (
+                        <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-blue-400 transform group-hover:translate-x-1 transition-all shrink-0" />
+                    )}
                 </div>
             </div>
 

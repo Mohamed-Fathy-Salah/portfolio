@@ -48,6 +48,13 @@ export type Education = {
     details?: DetailItem[];
 };
 
+export type CourseOrBook = {
+    id: string;
+    title: string;
+    description?: string;
+    link?: string;
+};
+
 export const education: Education[] = [
     {
         id: 'benha',
@@ -75,7 +82,7 @@ export const experiences: Experience[] = [
         period: 'Feb 2026 - Present',
         description: '',
         details: [],
-        skills: ['Ruby', 'Go', 'MySql', 'Redis', 'ClickHouse', 'Elastic Search', 'Kubernetes', 'AWS', 'Jenkins']
+        skills: ['Ruby', 'Go', 'MySql', 'Redis', 'ClickHouse', 'Elastic Search', 'Kubernetes', 'Docker', 'AWS', 'Jenkins']
     },
     {
         id: 'efg',
@@ -296,5 +303,65 @@ export const awards: AwardItem[] = [
         date: '2021',
         description: 'Ranked 118th in ECPC Qualification.',
         issuer: 'ICPC'
+    }
+];
+
+export const coursesAndBooks: CourseOrBook[] = [
+    {
+        id: 'dotnet-microservices',
+        title: '.NET 8 Microservices',
+        description: 'ASP.NET Web API, Docker, RabbitMQ, gRPC, YARP Gateway',
+    },
+    {
+        id: 'network-engineering',
+        title: 'Network Engineering',
+        description: 'Low latency and high throughput backend design',
+    },
+    {
+        id: 'node-react-microservices',
+        title: 'Node.js + React Microservices',
+        description: 'E-Commerce microservice app',
+    },
+    {
+        id: 'database-systems-cmu',
+        title: 'Database Systems (CMU)',
+        description: 'Advanced database internals and systems design',
+    },
+    {
+        id: 'performance-engineering-mit',
+        title: 'Performance Engineering (MIT)',
+        description: 'Software performance optimization and engineering',
+    },
+    {
+        id: 'clean-code',
+        title: 'Clean Code',
+        description: 'A Handbook of Agile Software Craftsmanship',
+    },
+    {
+        id: 'code-refactoring',
+        title: 'Code Refactoring',
+        description: 'Improving the Design of Existing Code',
+    },
+    {
+        id: 'design-patterns',
+        title: 'Design Patterns',
+        description: 'Elements of Reusable Object-Oriented Software',
+    },
+    {
+        id: 'ds-algo-made-easy',
+        title: 'DS & Algo Made Easy',
+        description: 'Data Structures and Algorithmic Puzzles',
+    },
+    {
+        id: 'awesome-low-level-design',
+        title: 'Awesome Low Level Design',
+        link: 'https://github.com/ashishps1/awesome-low-level-design',
+        description: 'Curated list of low level design resources',
+    },
+    {
+        id: 'awesome-system-design',
+        title: 'Awesome System Design',
+        link: 'https://github.com/ashishps1/awesome-system-design-resources',
+        description: 'Curated list of system design resources',
     }
 ];
