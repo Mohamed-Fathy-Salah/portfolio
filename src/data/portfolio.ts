@@ -82,7 +82,7 @@ export const experiences: Experience[] = [
         period: 'Feb 2026 - Present',
         description: '',
         details: [],
-        skills: ['Ruby', 'Go', 'MySql', 'Redis', 'ClickHouse', 'Elastic Search', 'Kubernetes', 'Docker', 'AWS', 'Jenkins']
+        skills: ['Ruby', 'Go', 'MySql', 'Redis', 'ClickHouse', 'Elastic Search', 'Kubernetes', 'Docker', 'AWS', 'Kafka', 'Sidekiq', 'Jenkins', 'ArgoWF']
     },
     {
         id: 'efg',
@@ -213,6 +213,20 @@ export const experiences: Experience[] = [
             },
             {
                 summary: 'Data & Workflow Migration: Automated migration of 100,000+ records and old workflows prior to go-live.',
+                detailedContent: [
+                    {
+                        type: 'text',
+                        content: 'Made scripts to migrate resources from old workflows to latest ones and on the desired step. It removed the manual work that was done each time the workflow getting updated.'
+                    },
+                    {
+                        type: 'text',
+                        content: 'migrated unstructured and denormalized data from excel sheets and word documents to production.'
+                    },
+                    {
+                        type: 'image',
+                        content: '../../public/migration-pipeline.png'
+                    }
+                ]
             },
             {
                 summary: 'Mentorship & Leadership: Led code reviews, mentored juniors, and authored automation scripts.'
