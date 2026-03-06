@@ -139,11 +139,11 @@ export const experiences: Experience[] = [
                             },
                             {
                                 type: 'image',
-                                content: '../../public/rule-engine-tables.png'
+                                content: '/rule-engine-tables.png'
                             },
                             {
                                 type: 'image',
-                                content: '../../public/rule-engine-tree.png'
+                                content: '/rule-engine-tree.png'
                             }
                         ]
                     }, {
@@ -224,7 +224,7 @@ export const experiences: Experience[] = [
                     },
                     {
                         type: 'image',
-                        content: '../../public/migration-pipeline.png'
+                        content: '/migration-pipeline.png'
                     }
                 ]
             },
