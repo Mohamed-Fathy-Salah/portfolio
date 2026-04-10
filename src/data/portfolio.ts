@@ -81,7 +81,11 @@ export const experiences: Experience[] = [
         company: 'Luciq / Instabug',
         period: 'Feb 2026 - Present',
         description: '',
-        details: [],
+        details: [
+            { summary: 'Resolved 2 race conditions that resulted in 18 million duplicated rows in MySql.' },
+            { summary: 'Optimized CI/CD testing pipeline and testing generation guidelines, reducing execution time from ~20 minutes to ~10 minutes.' },
+            { summary: 'Built a pre-commit script to run only affected specs, improving developer feedback loop.' },
+        ],
         skills: ['Ruby', 'Go', 'MySql', 'Redis', 'ClickHouse', 'Elastic Search', 'Kubernetes', 'Docker', 'AWS', 'Kafka', 'Sidekiq', 'Jenkins', 'ArgoWF']
     },
     {
